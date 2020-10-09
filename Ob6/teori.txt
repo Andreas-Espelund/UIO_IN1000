@@ -1,0 +1,23 @@
+Oppgave 3: Teorioppgave
+
+1.
+Innkaplsing går ut på at programmeraren som brukar klassen, kun har tilgang
+til grensesnittet til klasssen. At det er tydelige grenser mellom klasser og
+funksjonar gjer at det blir tydelig korleis det er meint at variablane skal
+brukast. Og det er lettare å finne ut kor det er feil. Det gjer det også
+meir oversiktleg når programma blir meir komplekse.
+
+2.
+Grensesnittet til et objekt er tjenestane som er tilgjengelige for
+denne objekter i denne klassen. Desse tjenestane er metoder som kan kallast
+på for å legge til, endre eller hente data fra et objekt. Desse metodane er
+definerte i Klassedefinisjon.
+
+3.
+En instansmetode er metodane vi definerer inne i Klassedefinisjonen.
+Dei metodane gjeld for alle instansane av denne klassen og utgjer
+klassens grensesnitt.
+Forskjellen på desse funksjonane er at vi lagar desse metodane sjølv.
+Vi kallar på metoden med "dot" notasjon og en kallar alltid på metoden
+for et objekt. "objekt.metode(argument)".
+Det som er likt er at metodane kan ta argument og returnere verdiar.

@@ -1,0 +1,13 @@
+Kommentar til innleveringa:
+a)
+Eg syntest inneveringa var ganske overkommelig. Det vanskeligste var den
+frivillige delen av oppgave 3. Men eg syntest det var utfordrande og eg
+lærte mykje av den. Førsteutkastet mitt til denne oppgava brukte en meir tungvindt 
+if-test, men ved hjelp av 'or' og 'and' fikk eg korta den ned mykje.  
+
+Ellers syntest eg at oppgave 1 og 2 var ganske enkle sidan eg har programmert litt i 
+python fra før og dette var ting eg allerede kunne. 
+
+b)
+Eg brukte omtrent 2.5 timar tilsammen på innleveringa. Eg brukte mykje av tida på
+den frivillige oppgava 3.3.

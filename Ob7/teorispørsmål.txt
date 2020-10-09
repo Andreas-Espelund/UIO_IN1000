@@ -1,0 +1,18 @@
+b)
+
+Det er naturlig å lagre sangene i en instansvariabel som er en liste.
+Dette er fordi vi trenger bare en plass å lagre objektene, og de trenger ikke
+f.eks. å ha en nøkkel som peker til objektet.Når vi skal søke i listen,
+bruker vi instansmetodene som finnes for sang og spilleliste objektene.
+
+
+ Dessuten heter det spilleliste,
+ikke spilleordbok.
+
+c)
+Fordelen ved å lese inn filen i en egen metode istedenfor konstruktøren,
+er at man kan lese inn flere filer til samme spilleliste ved å kalle på
+funksjonen lesFraFil med ulike filnavn.
+Man kan også opprette spillelister uten noen sanger, for så å legge til sanger
+en etter en med leggTilSang metoden. Å dele opp klassens funksjonalitet i ulike
+metoder gir oss mer fleksibilitet for hvordan vi kan bruke klassen.

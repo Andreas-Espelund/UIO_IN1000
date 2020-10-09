@@ -1,0 +1,4 @@
+ønsker tilbakemelding på if testen i definisjonen av instansmetoden rekkefolge(self,inpDato)
+er det bra å ha så mange utsagn/påstander i samme if/elif setning. 
+
+
