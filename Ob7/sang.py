@@ -6,21 +6,21 @@ metodene spill, sjekkArtist, sjekkTittel og sjekkArtistOgTittel.
 '''
 
 class Sang:
-    #Sang-objektene blir initialisert med _artist og _tittel som instansvariabler
+    #Sang-objekta blir initialisert med _artist og _tittel som instansvariablar
     def __init__(self,artist,tittel):
         self._tittel = tittel.lower()
         self._artist = artist.lower()
-    #__str__ returnerer artistnavn og låtnavn på en lesbar måte
+    #__str__ returnerer artistnavn og låtnavn på ein lesbar måte
     def __str__(self):
         out = self._tittel+", "+self._artist
         return out
 
-    #spill metoden returnerer en streng som sier at sangen blir spilt av.
+    #spill metoden returnerer ein streng som seier at sangen blir spelt av.
     def spill(self):
          out = "Spiller "+self._tittel+" av "+self._artist+"."
          print(out)
 
-    #sjekkArtist tar et navn som parameter og sjekker om navnet eller et av navnene i navn, samsvarer med artistnavnet
+    #sjekkArtist tar eit navn som parameter og sjekker om navn eller et av navnene i navn, samsvarer med artistnavnet
     def sjekkArtist(self,navn):
         status = False
         inputListe = navn.split(" ")
@@ -31,7 +31,7 @@ class Sang:
                
         return status
     
-    #sjekkTittel tar en låttittel som parameter og sjekker om det stemmer med låttittelen til objektet
+    #sjekkTittel tar ein låttittel som parameter og sjekkar om det stemmar med låttittelen til objektet
     def sjekkTittel(self,tittel):
         status = False
         inputListe = tittel.split(" ")
@@ -42,7 +42,7 @@ class Sang:
 
         return status
 
-    #sjekkArtistOgTittel kaller på sjekttTittel og sjekkArtist og returerer True om begge er True
+    #sjekkArtistOgTittel kallar på sjekttTittel og sjekkArtist og returerar True om begge er True
     #og False dersom begge er False 
     def sjekkArtistOgTittel(self,artist,tittel):
         return self.sjekkTittel(tittel) and self.sjekkArtist(artist)
