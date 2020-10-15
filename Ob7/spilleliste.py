@@ -14,7 +14,7 @@ class Spilleliste:
     def __init__(self, listenavn):
         self._sanger = []
         self._navn = listenavn
-    
+
     #__str__ funksjonen returnerer self._navn og self._sanger
     def __str__(self):
         output = self._navn+" :"+self._sanger
@@ -30,14 +30,14 @@ class Spilleliste:
             biter = linje.split(";")
             tittel = biter[0]
             artist = biter[1].strip("\n")
-            sanger[i] = Sang(tittel,artist)
+            sanger[i] = Sang(artist,tittel)
             self.leggTilSang(sanger[i])
             i += 1
-   
+
     #leggTilSang tar et Sang-objekt som parameter og legger det til i spillelisten
     def leggTilSang(self,sang):
         self._sanger.append(sang)
-  
+
     #fjernSang tar et Sang-objekt som parameter og fjerner det fra spillelisten
     def fjernSang(self,sang):
         self._sanger.remove(sang)

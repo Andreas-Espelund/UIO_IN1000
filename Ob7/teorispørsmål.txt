@@ -1,8 +1,8 @@
 b)
 
 Det er naturlig å lagre sangene i en instansvariabel som er en liste.
-Dette er fordi vi trenger bare en plass å lagre objektene, og de trenger ikke
-f.eks. å ha en nøkkel som peker til objektet.Når vi skal søke i listen,
+Dette er fordi vi trenger bare en plass å lagre Sang-objektene, vi trenger
+ikke pekere til objektene. Når vi skal søke i listen,
 bruker vi instansmetodene som finnes for sang og spilleliste objektene.
 
 
