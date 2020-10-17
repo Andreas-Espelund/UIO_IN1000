@@ -30,7 +30,7 @@ class Spilleliste:
             biter = linje.split(";")
             tittel = biter[0]
             artist = biter[1].strip("\n")
-            sanger[i] = Sang(artist,tittel)
+            sanger[i] = Sang(artist,tittel,None)
             self.leggTilSang(sanger[i])
             i += 1
 

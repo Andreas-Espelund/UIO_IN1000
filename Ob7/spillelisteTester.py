@@ -10,7 +10,7 @@ def hovedprogram():
     allMusikk.spillAlle()
     print()
 
-    nySang = Sang("Jahn Teigen", "Mil etter mil")
+    nySang = Sang("Jahn Teigen", "Mil etter mil",None)
     print("Spiller ny sang:")
     allMusikk.spillSang(nySang)
     print()

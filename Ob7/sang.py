@@ -18,12 +18,15 @@ class Sang:
         return out
 
     #spill metoden returnerer ein streng som seier at sangen blir spelt av.
+    #metoden er utvidet slik at den bruker simpleaudio til å spille av sangen med en lydfil
     def spill(self):
          out = "Spiller "+self._tittel+" av "+self._artist+"."
          print(out)
-         wave_obj = sa.WaveObject.from_wave_file(self._filnavn)
-         play_obj = wave_obj.play() 
-         play_obj.wait_done()
+         #den spiller kun av sangen med simpleaudio dersom den er gitt et filnavn som ikke er None
+         if self._filnavn is not None:
+            wave_obj = sa.WaveObject.from_wave_file(self._filnavn)
+            play_obj = wave_obj.play() 
+            play_obj.wait_done()
 
 
     #sjekkArtist tar eit navn som parameter og sjekker om navn eller et av navnene i navn, samsvarer med artistnavnet
