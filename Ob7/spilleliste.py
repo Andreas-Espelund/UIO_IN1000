@@ -56,7 +56,7 @@ class Spilleliste:
     #spillAlle printar alle sangene
     def spillAlle(self):
         for sang in self._sanger:
-            print(sang)
+            sang.spill()
 
     #hentArtistUtvalg tar eit artistNavn som parameter og lagar ein ny liste med alle
     #sangene til den artisten, som er i spelelista, og returnerar den.

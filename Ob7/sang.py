@@ -4,12 +4,14 @@ Klassedefinisjon for Sang:
 Klassen har instansvariablene _tittel og _artist, og 
 metodene spill, sjekkArtist, sjekkTittel og sjekkArtistOgTittel. 
 '''
+import simpleaudio as sa
 
 class Sang:
     #Sang-objekta blir initialisert med _artist og _tittel som instansvariablar
-    def __init__(self,artist,tittel):
+    def __init__(self,artist,tittel,filnavn):
         self._tittel = tittel.lower()
         self._artist = artist.lower()
+        self._filnavn = filnavn
     #__str__ returnerer artistnavn og låtnavn på ein lesbar måte
     def __str__(self):
         out = self._tittel+", "+self._artist
@@ -19,6 +21,10 @@ class Sang:
     def spill(self):
          out = "Spiller "+self._tittel+" av "+self._artist+"."
          print(out)
+         wave_obj = sa.WaveObject.from_wave_file(self._filnavn)
+         play_obj = wave_obj.play() 
+         play_obj.wait_done()
+
 
     #sjekkArtist tar eit navn som parameter og sjekker om navn eller et av navnene i navn, samsvarer med artistnavnet
     def sjekkArtist(self,navn):
