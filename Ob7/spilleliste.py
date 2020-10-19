@@ -33,6 +33,8 @@ class Spilleliste:
             sanger[i] = Sang(artist,tittel,None)
             self.leggTilSang(sanger[i])
             i += 1
+        fil.close()
+        
 
     #leggTilSang tar eit Sang-objekt som parameter og legg det til i spelelista
     def leggTilSang(self,sang):
