@@ -21,6 +21,7 @@ class Spillebrett:
         self._rader = rader #horisontal
         self._kolonner = kolonner #vertikal
         self._generasjon = 0
+        self._antallCeller = rader*kolonner
 
         #det blir laget et rutenett som er en nostet liste med 'kolonner' antall
         #lister som hver inneholder 'rader' antall celle-objekter
@@ -134,5 +135,17 @@ class Spillebrett:
     #antall levende celler
     def lagStatestikk(self):
         levende = self.finnAntallLevende()
-
         return "Generasjon: "+str(self._generasjon)+" - "+"Antall levende celler: "+str(levende)
+
+
+    #jeg la til en prosedyre som lager en prosent-bar som gjør det lett
+    #å se hvor stor andel av cellene som er levende
+    def lagProsentBar(self):
+        levende = self.finnAntallLevende()
+        prosent = int(levende/self._antallCeller*100)
+        prosentStr = (str(prosent)+"%")
+        fyll = "█"*int(prosent/2)
+        tom = " "*(49-int(prosent/2))
+        print("-"*22,"Levende","-"*23)
+        print("|",fyll,tom,"|")
+        print("-"*24,prosentStr,"-"*(28-len(prosentStr)))
