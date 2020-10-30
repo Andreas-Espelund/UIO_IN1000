@@ -1,10 +1,12 @@
 '''
-main for game of life spillet
+main-program for 'Game of Life' spelet som skal simulere cellers liv og doed
 
-Spillet lar brukeren velge spillebrett sin storrelse, antall rader og kolonner (bredde og lengde)
+Spelet lar brukeren velge spillebrett sin storrelse, antall rader og kolonner (bredde og lengde)
 Brukeren kan trykke 'enter' for å oppdatere brettet helt til alle cellene er dode,
 da kan brukeren trykke 'enter' igjen for aa spille paa nytt.
 Brukeren kan ogsaa trykke 'q' og 'enter' for aa avslutte under eller etter spillet.
+
+Eg har utvida programmet med fleire grafiske element og litt diverse småfunksjonar.
 '''
 
 #eg importerar Spillebrett klassen

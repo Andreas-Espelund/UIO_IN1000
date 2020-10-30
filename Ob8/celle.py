@@ -6,6 +6,9 @@ Klassen har folgende metoder:
     * settLevende
     * erLevende
     * __str__
+
+Eg valgte aa bruke en boolean verdi istedenfor at cellen sin status
+var en streng "levende" eller "doed", eg syntest det er meir ryddig.
 '''
 
 class Celle:
@@ -29,6 +32,6 @@ class Celle:
     #jeg velger å bruke en __str__ metode for å gjore det lettere aa tegne brettet
     def __str__(self):
         if self._lever:
-            return "O"
+            return "O "
         else:
-            return "."
+            return ". "
