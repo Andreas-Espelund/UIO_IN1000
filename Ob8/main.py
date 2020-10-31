@@ -86,10 +86,10 @@ def sjekkint(inp):
     # aa oppdatere
     while sjekka == False:
         if inp.isdigit():
-            if 0 < int(inp) <= 60:
+            if 0 < int(inp) <= 100:
                 sjekka = True
             else:
-                inp = input("Ugyldig inntasting! Skriv inn tall mellom 0 og 50!\n>")
+                inp = input("Ugyldig inntasting! Skriv inn tall mellom 0 og 100!\n>")
         else:
             inp = input("Ugyldig inntasting! Skriv inn et TALL!\n>")
 
@@ -150,7 +150,7 @@ def main():
         nyttBrett.oppdatering()
 
     #brukaren kjem tilbake til hovedmeny/startskjemen og faar valget om aa starte et nytt spel eller avslutte
-    skrivGrafikk("start",0.1)
+    skrivGrafikk("start",0)
     valg = input("Trykk 'enter' for aa spille på nytt, skriv inn 'q' og trykk enter for aa avslutte: \n>").lower()
     #dersom brukaren skriv 'q' printar avsultningskjermen og programmet avsluttast, ellers blir main kalla paa nytt
     if valg == "q":

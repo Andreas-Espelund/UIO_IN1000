@@ -55,28 +55,17 @@ class Spillebrett:
 
     #instansmetoden finnNabo tar et celle-objekt sin plassering i rutenettet og
     #returnerer en liste med de tilstøtende celle-objektene (naboene)
+
     def finnNabo(self,rad,kolonne):
-        #jg ser på rad og kolonne som koordinater på et kart
-        #mainX og mainY, er hovedcellen sine koordinater
-        mainX = rad
-        mainY = kolonne
-        naboer = []
+        naboer= []
+        grenseK = len(self._rutenett[0]) - 1
+        grenseR = len(self._rutenett) - 1
 
-        #eg iterer gjennom alle cellene i rutenettet og legger cellen til
-        #naboer dersom den har en tilstøtende koorinat
-        y=0
-        for rad in self._rutenett:
-            x = 0
 
-            for elm in rad:
-                #her kunne eg brukt and istedenfor to ekstra if setningar,
-                if (x==mainX) or (x==mainX+1) or (x==mainX-1):
-                    if (y==mainY) or (y==mainY+1) or(y==mainY-1):
-                        if not ((x==mainX) and (y==mainY)):
-                            naboer.append(elm)
-
-                x += 1
-            y += 1
+        for x in range(kolonne-1,kolonne+2):
+            for y in range(rad-1,rad+2):
+                if (0 <= x <= grenseR) and (0 <= y <= grenseK) and not(x==kolonne and y==rad):
+                    naboer.append(self._rutenett[x][y])
 
         return naboer
 
